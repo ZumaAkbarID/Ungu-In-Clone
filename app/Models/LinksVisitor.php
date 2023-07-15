@@ -10,8 +10,8 @@ class LinksVisitor extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
-    public function visitor()
+    public function link()
     {
-        return $this->hasMany(LinksVisitor::class, 'link_id', 'id');
+        return $this->belongsTo(Links::class, 'link_id', 'id');
     }
 }
