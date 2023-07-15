@@ -16,7 +16,7 @@ Project ini hanya dibuat untuk portofolio, apabila terdapat seseorang yang meras
 
 ## Authors
 
--   [Ungu.in](https://ungu.in/)
+-   [Ungu.in](https://ungu.in/) (Original Website)
 -   [OSORA TEAM](https://www.linkedin.com/company/osorateam)
 -   [ZumaAkbarID](https://github.com/ZumaAkbarID)
 

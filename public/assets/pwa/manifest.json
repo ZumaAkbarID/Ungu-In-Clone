@@ -1,0 +1,17 @@
+{
+    "name": "Ungu.in - Make Your Aesthetic Link",
+    "short_name": "Ungu.in",
+    "start_url": "/index.php",
+    "background_color": "#FFFFFF",
+    "description": "Shorten your link here",
+    "display": "fullscreen",
+    "theme_color": "#FFFFFFf",
+    "icons": [
+        {
+            "src": "assets/img/logo-pwa.png",
+            "sizes": "400x400",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
