@@ -37,8 +37,14 @@ class Lists extends Controller
 
     function detail(Request $request, $shorten): object
     {
+        $link = Links::where('shorten', $shorten)->with('visitor')->first();
+        if (!$link || $link->user_id !== Auth::user()->id)
+            return redirect()->back()->with('info', 'Link tidak ditemukan.');
+
         return view('Link.Detail', [
-            'data' => parent::seo('Detail'),
+            'data' => parent::seo('Detail Link'),
+            'link' => $link,
+            'qr'   => generateQR(url('/') . '/' . $link->shorten)
         ]);
     }
 }

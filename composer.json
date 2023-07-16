@@ -27,7 +27,10 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         },
-        "files": ["app/Helpers/Slug.php"]
+        "files": [
+            "app/Helpers/Slug.php",
+            "app/Helpers/QRCode.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

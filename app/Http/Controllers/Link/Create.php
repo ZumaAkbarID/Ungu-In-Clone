@@ -41,13 +41,13 @@ class Create extends Controller
         }
 
         try {
-            Links::create([
+            $create = Links::create([
                 'user_id' => (Auth::check()) ? Auth::user()->id : null,
                 'original' => $request->original,
                 'shorten' => $tempSlug,
             ]);
             if (Auth::check()) {
-                return redirect()->to(route('Dashboard.Links'));
+                return redirect()->to(route('Dashboard.Links.Detail', $create->shorten));
             } else {
                 return redirect()->to(route('Landing', '#show-link'))->with('result', url('/') . '/' . $tempSlug);
             }

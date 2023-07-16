@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="mb-30px">
                                     <div class="input-group">
-                                        <span class="input-group-text" id="basic-addon1">ungu.in/</span>
+                                        <span class="input-group-text" id="basic-addon1">{{ url('/') }}/</span>
                                         <input class="form-control form-control-white" type="text" name="shorten"
                                             id="shorten" placeholder="Ketikkan link singkatmu" required>
                                     </div>
@@ -173,7 +173,7 @@
                 Afifah Putri yang penuh ide namun miskin eksekusi, dan pada akhirnya dipertemukan dalam berbagai projek
                 dengan sejuta manfaat.</p>
             <div class="row">
-                <div class="col-md-4 flex-center">
+                <div class="col-md-3 flex-center">
                     <div class="box-pict-member flex-center">
                         <div class="bg-pict-member"></div>
                         <img class="pict-member" src="https://ungu.in/assets/img/member/zaki.png" alt="">
@@ -186,7 +186,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 flex-center">
+                <div class="col-md-3 flex-center">
                     <div class="box-pict-member flex-center">
                         <div class="bg-pict-member"></div>
                         <img class="pict-member" src="https://ungu.in/assets/img/member/meisha.png" alt="">
@@ -198,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 flex-center">
+                <div class="col-md-3 flex-center">
                     <div class="box-pict-member flex-center">
                         <div class="bg-pict-member"></div>
                         <img class="pict-member" src="https://ungu.in/assets/img/member/okta.png" alt="">
@@ -207,6 +207,18 @@
                                 Oktafian</a>
                         </div>
                         <div id="name-tag-icon-okta" class="name-tag-icon">
+                            <img src="https://ungu.in/assets/img/name-tag.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 flex-center">
+                    <div class="box-pict-member flex-center">
+                        <div class="bg-pict-member"></div>
+                        <img class="pict-member" src="https://i.ibb.co/2yjMhCW/zoomex.png" alt="">
+                        <div id="name-tag-zuma" class="name-tag">
+                            <a target="_blank" href="https://instagram.com/zuma.akbar/">Rahmat Wahyuma Akbar</a>
+                        </div>
+                        <div id="name-tag-icon-zuma" class="name-tag-icon">
                             <img src="https://ungu.in/assets/img/name-tag.svg" alt="">
                         </div>
                     </div>

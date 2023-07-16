@@ -1,11 +1,9 @@
 @extends('Layouts.Main')
-
 @section('content')
     <div class="container mt-60px mb-60px">
         <div class="row">
             @include('Layouts.Sidebar')
             <div class="col-lg-9 col-md-12">
-                <!-- dashboard -->
                 <section id="dashboard" class="dashboard min-vh-100">
                     <div class="container">
                         <div class="box-unguin-40 bg-purple nick-white text-center">
@@ -21,22 +19,28 @@
                                 </div>
                             </div>
 
-                            <h3 class="bold mb-2">Buat link singkatmu dibawah</h3>
+                            <p class="bold mb-2"><a target="_BLANK" class="text-white"
+                                    href="{{ url('/') }}/{{ $link->shorten }}">{{ url('/') }}/{{ $link->shorten }}</a>
+                            </p>
+                            <p class="thin"><a target="_BLANK" class="text-white"
+                                    href="{{ $link->original }}">{{ $link->original }}</a></p>
                         </div>
                         <form action="" method="POST" class="make-link">
                             @csrf
                             <div class="mb-30px mt-60px">
                                 <input type="text" name="original" id="original" class="form-control"
-                                    placeholder="Ketikkan link panjangmu">
+                                    placeholder="Ketikkan link panjangmu" value="{{ $link->original }}">
                             </div>
-                            <div class="input-group mb-30px">
-                                <span class="input-group-text bg-purple nick-white"
-                                    id="basic-addon1">{{ url('/') }}/</span>
-                                <input type="text" class="form-control" name="shorten" id="shorten"
-                                    placeholder="Ketikkan link singkatmu">
+                            <div class="mb-30px">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-purple nick-white"
+                                        id="basic-addon1">{{ url('/') }}/</span>
+                                    <input type="text" class="form-control" name="shorten" id="shorten"
+                                        placeholder="Ketikkan link singkatmu" value="{{ $link->shorten }}">
+                                </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn bg-pink">Submit</button>
+                                <button type="submit" class="btn bg-pink">Update</button>
                             </div>
                         </form>
                     </div>
