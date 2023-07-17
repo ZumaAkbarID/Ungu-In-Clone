@@ -19,7 +19,7 @@
         <p class="ms-3">Dashboard</p>
     </a>
 
-    <a href="{{ route('Dashboard.Links') }}" class="menu-sidebar @if (Route::currentRouteName() == 'Dashboard.Links') active @endif">
+    <a href="{{ route('Dashboard.Links') }}" class="menu-sidebar @if (Route::currentRouteName() == 'Dashboard.Links' || Route::currentRouteName() == 'Dashboard.Links.Detail') active @endif">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
             class="bi bi-collection" viewBox="0 0 16 16">
             <path

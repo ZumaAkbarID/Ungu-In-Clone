@@ -92,7 +92,7 @@
                                 src="https://ungu.in/assets/img/illustration-info-user.png" alt="">
                         </div>
                         <div class="data-info">
-                            <h3 class="nick-white">3000</h3>
+                            <h3 class="nick-white">{{ number_format($showcase['users'], 0, ',', '.') }}</h3>
                             <p class="nick-white">Pengguna aktif</p>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                                 src="https://ungu.in/assets/img/illustration-info-link.png" alt="">
                         </div>
                         <div class="data-info">
-                            <h3 class="nick-white">77902</h3>
+                            <h3 class="nick-white">{{ number_format($showcase['links'], 0, ',', '.') }}</h3>
                             <p class="nick-white">Link aesthetic dibuat</p>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                         <div class="bg-pict-member"></div>
                         <img class="pict-member" src="https://i.ibb.co/2yjMhCW/zoomex.png" alt="">
                         <div id="name-tag-zuma" class="name-tag">
-                            <a target="_blank" href="https://instagram.com/zuma.akbar/">Rahmat Wahyuma Akbar</a>
+                            <a target="_blank" href="https://instagram.com/zuma.akbar/">Rahmat Wahyuma Akbar (Cloner)</a>
                         </div>
                         <div id="name-tag-icon-zuma" class="name-tag-icon">
                             <img src="https://ungu.in/assets/img/name-tag.svg" alt="">

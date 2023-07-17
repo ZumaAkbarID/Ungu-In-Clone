@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Links;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class Main extends Controller
@@ -15,7 +17,11 @@ class Main extends Controller
 
         return view('Main.Index', [
             'data' => parent::seo('Make Your Aesthetic Link'),
-            'result' => $result
+            'result' => $result,
+            'showcase' => [
+                'users' => User::all()->count(),
+                'links' => Links::all()->count()
+            ]
         ]);
     }
 }

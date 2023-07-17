@@ -49,7 +49,7 @@
     <script src="https://ungu.in/assets/js/bootstrap.min.js"></script>
     <script src="https://ungu.in/assets/js/clipboard.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://ungu.in/assets/js/main.js"></script>
+    <script src="{{ asset('/') }}assets/script/main.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FW0EHNTMK2"></script>

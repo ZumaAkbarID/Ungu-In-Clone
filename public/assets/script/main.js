@@ -35,6 +35,12 @@ nameTagIcon.onclick = function () {
     nameTag.classList.toggle('opacity-1')
 }
 
+var nameTagIcon = document.getElementById('name-tag-icon-zuma')
+nameTagIcon.onclick = function () {
+    var nameTag = document.getElementById('name-tag-zuma')
+    nameTag.classList.toggle('opacity-1')
+}
+
 // password toggle
 function passwordToggle() {
     var toggleIconClose = document.getElementById('eye-close')
