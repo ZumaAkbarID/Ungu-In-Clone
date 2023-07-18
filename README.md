@@ -33,7 +33,28 @@ Clone repository ini atau download, masuk ke directory hasil clone kemudian jala
   cp .env.example .env
 ```
 
-Lakukan konfigurasi pada file .env, sesuaikan database dan url project, kemudian jalankan
+Lakukan konfigurasi pada file .env, sesuaikan database dan url project
+
+```bash
+APP_URL=https://ungu-in-clone.test
+
+DB_DATABASE=clone_unguin
+DB_USERNAME=xxxx
+DB_PASSWORD=xxxx
+
+ABSTRACTAPI_API_KEY="XXXXXX"
+
+QUEUE_CONNECTION=database
+```
+
+kemudian jalankan
+
+```bash
+php artisan queue:table
+php artisan migrate --seed
+```
+
+Selanjutnya
 
 ```bash
   (Non Virtual Domain)
@@ -42,4 +63,16 @@ Lakukan konfigurasi pada file .env, sesuaikan database dan url project, kemudian
 
 ```bash
   reload server, kemudian akses virtual domain yang telah dibuat
+```
+
+Jangan lupa jalankan queue karena data Visitor dianalisa di background
+
+```bash
+php artisan queue
+```
+
+atau
+
+```bash
+php artisan queue:listen
 ```

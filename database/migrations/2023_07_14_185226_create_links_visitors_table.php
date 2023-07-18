@@ -16,6 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('link_id');
             $table->string('ip_address');
             $table->text('user_agent');
+            $table->text('get_ref')->nullable();
+            $table->text('http_referer')->nullable();
             $table->boolean('checked')->default(false);
             $table->string('city')->nullable();
             $table->string('region')->nullable();

@@ -49,6 +49,43 @@ class Lists extends Controller
             ->get()
             ->pluck("count", "month_name");
 
+        $city = LinksVisitor::select(DB::raw("COUNT(*) AS count"), 'city')
+            ->groupBy('city')
+            ->get()
+            ->pluck("count", "city");
+
+        $region = LinksVisitor::select(DB::raw("COUNT(*) AS count"), 'region')
+            ->groupBy('region')
+            ->get()
+            ->pluck("count", "region");
+
+        $isp = LinksVisitor::select(DB::raw("COUNT(*) AS count"), 'isp_name')
+            ->groupBy('isp_name')
+            ->get()
+            ->sortByDesc('count')
+            ->pluck("count", "isp_name");
+
+        $vpn = LinksVisitor::select(DB::raw("COUNT(*) AS count"), 'is_vpn')
+            ->groupBy('is_vpn')
+            ->get()
+            ->sortByDesc('count')
+            ->pluck("count", "is_vpn");
+
+        $country = LinksVisitor::select(DB::raw("COUNT(*) AS count"), 'country', 'flag')
+            ->groupBy('country', 'flag')
+            ->get()
+            ->sortByDesc('count')
+            ->mapToGroups(function ($item) {
+                return [
+                    $item['country'] => [
+                        'count' => $item['count'],
+                        'flag' => $item['flag'],
+                    ]
+                ];
+            });
+
+        $lists = LinksVisitor::all();
+
         return view('Link.Detail', [
             'data' => parent::seo('Detail Link'),
             'link' => $link,
@@ -56,7 +93,19 @@ class Lists extends Controller
             'years' => [
                 'labels' => $detailLink->keys(),
                 'data' => $detailLink->values(),
-            ]
+            ],
+            'city' => [
+                'labels' => $city->keys(),
+                'data' => $city->values()
+            ],
+            'region' => [
+                'labels' => $region->keys(),
+                'data' => $region->values()
+            ],
+            'isp' => $isp,
+            'vpn' => $vpn,
+            'country' => $country,
+            'lists' => $lists,
         ]);
     }
 }

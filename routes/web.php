@@ -10,6 +10,8 @@ use App\Http\Controllers\Link\Edit;
 use App\Http\Controllers\Link\Lists;
 use App\Http\Controllers\Main;
 use App\Http\Controllers\Profile\Edit as EditProfile;
+use App\Http\Controllers\HandleVisit;
+use App\Models\LinksVisitor;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,4 +55,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
 
     Route::get('/whats-new', [Dashboard::class, 'whatsNew'])->name('Dashboard.WhatsNew');
 });
+// Create Link
 Route::post('/create', [Create::class, 'process'])->name('CreateLink');
+
+// Redirect
+Route::get('{shorten}', [HandleVisit::class, 'process'])->name('Visit');
